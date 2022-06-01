@@ -1,0 +1,6 @@
+<study>
+  <check>
+    <message>No errors found in configuration file syntax.</message>
+    <message src="BPR/exp00000/log/librec-20220524_123132.log">No errors found in experiment 0 log.</message>
+  </check>
+</study>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!-- Configuration file for CIKM 2021 demo -->
+<!-- Part 01: Basic functionality -->
+<!-- Adapted from demo video demo due to recent software updates -->
+
+<librec-auto>
+	<random-seed>202110</random-seed>
+	<thread-count>1</thread-count>
+	<library src="system">default-algorithms.xml</library>
+	
+	<!-- DATA SECTION -->
+	<data>
+		<data-dir>data</data-dir>
+		<format>UIR</format>
+		<data-file format="text">rating_5000_cls_hc_10core_iterative.csv</data-file>
+	</data>
+	
+	<!-- FEATURES SECTION -->
+	<features>
+		<appender-class>net.librec.data.convertor.appender.ItemFeatureAppender</appender-class>
+		<item-feature-file>loan_feature_df_hc_10core.csv</item-feature-file>
+		<protected-feature name="fea:GENDER_F" type="item">GENDER_F</protected-feature>
+	</features>
+	
+	<!-- SPLITTER SECTION -->
+	<splitter>
+		<model count="3">kcv</model>
+		<save>true</save>
+	</splitter>
+	
+	ALGORITHM SECTION
+	<alg ref="alg:biasedmf">
+		<iterator-max>50</iterator-max>
+		<learn-rate><lower>0.00001</lower><upper>0.9</upper></learn-rate>
+		<item-reg><lower>0.00001</lower><upper>0.9</upper></item-reg>
+		<user-reg><lower>0.00001</lower><upper>0.9</upper></user-reg>
+		<bias-reg><lower>0.00001</lower><upper>0.9</upper></bias-reg>
+		<learn-rate-max><lower>0.00001</lower><upper>0.9</upper></learn-rate-max>
+		<num-factors type="discrete"><lower>1</lower><upper>150</upper></num-factors>
+	</alg>
+
+	<!-- METRICS SECTION -->
+	<metric>
+		<ranking>true</ranking>
+		<list-size>50</list-size>
+		<class>ndcg,precision,psp</class>
+		<protected-feature ref="fea:GENDER_F"/>
+	</metric>
+	
+	<!-- <rerank>
+		<script lang="python3" src="system">
+			<script-name>far_rerank.py</script-name>
+			<param name="max_len">10</param>
+			<param name="lambda">
+				<value>0.00</value>
+				<value>0.05</value>
+				<value>0.10</value>
+				<value>0.15</value>
+				<value>0.20</value>
+				<value>0.25</value>
+				<value>0.30</value>
+				<value>0.35</value>
+				<value>0.40</value>
+				<value>0.45</value>
+				<value>0.50</value>
+				<value>0.55</value>
+				<value>0.60</value>
+				<value>0.65</value>
+				<value>0.70</value>
+				<value>0.75</value>
+				<value>0.80</value>
+				<value>0.85</value>
+				<value>0.90</value>
+				<value>0.95</value>
+			</param>
+			<param name="binary">False</param>
+			<param ref="fea:GENDER_F"/>
+		</script>
+	</rerank> -->
+	
+
+	<!-- POST-PROCESSING SECTION -->
+	<post>
+		<script lang="python3" src="system">
+			<script-name>result_graphics.py</script-name>
+			<param name="browser">true</param>
+		</script> 
+	</post>
+</librec-auto>

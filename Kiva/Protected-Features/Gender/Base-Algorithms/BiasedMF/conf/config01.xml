@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!-- Configuration file for CIKM 2021 demo -->
+<!-- Part 01: Basic functionality -->
+<!-- Adapted from demo video demo due to recent software updates -->
+
+<librec-auto>
+	<random-seed>202110</random-seed>
+	<thread-count>1</thread-count>
+	<library src="system">default-algorithms.xml</library>
+	
+	<!-- DATA SECTION -->
+	<data>
+		<data-dir>data</data-dir>
+		<format>UIR</format>
+		<data-file format="text">rating_5000_cls_hc_10core_iterative.csv</data-file>
+	</data>
+	
+	<!-- FEATURES SECTION -->
+	<features>
+		<appender-class>net.librec.data.convertor.appender.ItemFeatureAppender</appender-class>
+		<item-feature-file>loan_feature_df_hc_10core.csv</item-feature-file>
+		<protected-feature name="fea:GENDER_F" type="item">GENDER_F</protected-feature>
+	</features>
+	
+	<!-- SPLITTER SECTION -->
+	<splitter>
+		<model count="3">kcv</model>
+		<save>true</save>
+	</splitter>
+	
+	<optimize>
+		<iterations>5</iterations> 
+		<metric>psp</metric>
+	</optimize> 
+	
+	<!-- ALGORITHM SECTION -->
+    <alg ref="alg:biasedmf">
+		<user-reg><lower>0.001</lower><upper>0.8</upper></user-reg>
+		<item-reg><lower>0.001</lower><upper>0.8</upper></item-reg>
+        <num-factors>50</num-factors>
+	</alg>
+
+	<!-- METRICS SECTION -->
+	<metric>
+		<ranking>true</ranking>
+		<list-size>50</list-size>
+		<class>ndcg,precision,psp</class>
+		<protected-feature ref="fea:GENDER_F"/>
+	</metric>
+	
+	<!-- POST-PROCESSING SECTION -->
+
+	<post>
+		<script lang="python3" src="system">
+			<script-name>result_graphics.py</script-name>
+			<param name="browser">true</param>
+		</script> 
+		<script lang="python3" src="system">
+			<script-name>results_to_csv.py</script-name>
+			<param name="option">all</param>
+		</script> 
+	</post>
+</librec-auto>
