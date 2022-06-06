@@ -1,0 +1,2 @@
+Experiment,learn-rate-max,user-reg,item-reg,num-factors,NormalizedDCGEvaluator,ndcg_metric.py
+exp00000,0.001,0.001,0.001,5.0,0.05631434733293622,0.05467114430811134

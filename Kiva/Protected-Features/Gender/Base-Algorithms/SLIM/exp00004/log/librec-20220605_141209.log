@@ -1,0 +1,91 @@
+22/06/05 14:12:09 INFO TextDataConvertor: Dataset: [data/rating_5000_cls_hc_10core_iterative.csv]
+22/06/05 14:12:09 INFO TextDataConvertor: DataSet: ...ng_5000_cls_hc_10core_iterative.csv is finished
+22/06/05 14:12:09 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 14:12:09 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 14:12:09 INFO TextDataModel: Transform data to Convertor successfully!
+22/06/05 14:12:10 INFO TextDataModel: Split data to train Set and test Set successfully!
+22/06/05 14:12:10 INFO TextDataModel: Feature appender loaded successfully!
+22/06/05 14:12:10 INFO TextDataConvertor: Dataset: [data/split/cv_1/train.txt]
+22/06/05 14:12:10 INFO TextDataConvertor: DataSet: data/split/cv_1/train.txt is finished
+22/06/05 14:12:10 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 14:12:10 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 14:12:10 INFO TextDataModel: Transform data to Convertor successfully!
+22/06/05 14:12:10 INFO TextDataConvertor: Dataset: [data/split/cv_1/test.txt]
+22/06/05 14:12:10 INFO TextDataConvertor: DataSet: data/split/cv_1/test.txt is finished
+22/06/05 14:12:10 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 14:12:10 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 14:12:10 INFO TextDataModel: Split data to train Set and test Set successfully!
+22/06/05 14:12:10 INFO TextDataModel: Data cardinality of training is 73580
+22/06/05 14:12:10 INFO TextDataModel: Data cardinality of testing is 36791
+22/06/05 14:12:10 INFO TextDataModel: Feature appender loaded successfully!
+22/06/05 14:12:10 INFO RecommenderJob: ExpCMD: START - Executing recommender job on 1.
+22/06/05 14:12:13 INFO SLIMRecommender: Job Setup completed.
+22/06/05 14:12:14 INFO SLIMRecommender: SLIMRecommender iter 1: loss = 452810.9978779068, delta_loss = -452810.9978779068
+22/06/05 14:12:15 INFO SLIMRecommender: SLIMRecommender iter 2: loss = 27796.236981817085, delta_loss = 425014.7608960897
+22/06/05 14:12:16 INFO SLIMRecommender: SLIMRecommender iter 3: loss = 28299.024145673855, delta_loss = -502.78716385677035
+22/06/05 14:12:16 INFO SLIMRecommender: Job Train completed.
+22/06/05 14:12:16 INFO RecommenderJob: ExpCMD: COMPLETE
+22/06/05 14:12:16 INFO RecommenderJob: EvalCMD: START
+22/06/05 14:12:16 INFO SLIMRecommender: begin recommend
+22/06/05 14:12:17 INFO SLIMRecommender: end recommend
+22/06/05 14:12:17 INFO RecommenderJob: Evaluator info:NormalizedDCGEvaluator is 0.012227373102197901
+22/06/05 14:12:17 INFO SLIMRecommender: begin recommend
+22/06/05 14:12:18 INFO SLIMRecommender: end recommend
+22/06/05 14:12:18 INFO RecommenderJob: Result path is exp00004/result/out-1.txt
+22/06/05 14:12:18 INFO RecommenderJob: EvalCMD: COMPLETE.
+22/06/05 14:12:18 INFO TextDataConvertor: Dataset: [data/split/cv_2/train.txt]
+22/06/05 14:12:18 INFO TextDataConvertor: DataSet: data/split/cv_2/train.txt is finished
+22/06/05 14:12:18 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 14:12:18 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 14:12:18 INFO TextDataModel: Transform data to Convertor successfully!
+22/06/05 14:12:18 INFO TextDataConvertor: Dataset: [data/split/cv_2/test.txt]
+22/06/05 14:12:18 INFO TextDataConvertor: DataSet: data/split/cv_2/test.txt is finished
+22/06/05 14:12:18 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 14:12:18 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 14:12:18 INFO TextDataModel: Split data to train Set and test Set successfully!
+22/06/05 14:12:18 INFO TextDataModel: Data cardinality of training is 73581
+22/06/05 14:12:18 INFO TextDataModel: Data cardinality of testing is 36790
+22/06/05 14:12:18 INFO TextDataModel: Feature appender loaded successfully!
+22/06/05 14:12:18 INFO RecommenderJob: ExpCMD: START - Executing recommender job on 2.
+22/06/05 14:12:21 INFO SLIMRecommender: Job Setup completed.
+22/06/05 14:12:22 INFO SLIMRecommender: SLIMRecommender iter 1: loss = 436464.115778869, delta_loss = -436464.115778869
+22/06/05 14:12:23 INFO SLIMRecommender: SLIMRecommender iter 2: loss = 28003.392165167104, delta_loss = 408460.72361370194
+22/06/05 14:12:24 INFO SLIMRecommender: SLIMRecommender iter 3: loss = 28513.21486429159, delta_loss = -509.82269912448464
+22/06/05 14:12:24 INFO SLIMRecommender: Job Train completed.
+22/06/05 14:12:24 INFO RecommenderJob: ExpCMD: COMPLETE
+22/06/05 14:12:24 INFO RecommenderJob: EvalCMD: START
+22/06/05 14:12:24 INFO SLIMRecommender: begin recommend
+22/06/05 14:12:25 INFO SLIMRecommender: end recommend
+22/06/05 14:12:25 INFO RecommenderJob: Evaluator info:NormalizedDCGEvaluator is 0.012203133454342895
+22/06/05 14:12:25 INFO SLIMRecommender: begin recommend
+22/06/05 14:12:25 INFO SLIMRecommender: end recommend
+22/06/05 14:12:25 INFO RecommenderJob: Result path is exp00004/result/out-2.txt
+22/06/05 14:12:25 INFO RecommenderJob: EvalCMD: COMPLETE.
+22/06/05 14:12:25 INFO TextDataConvertor: Dataset: [data/split/cv_3/train.txt]
+22/06/05 14:12:25 INFO TextDataConvertor: DataSet: data/split/cv_3/train.txt is finished
+22/06/05 14:12:25 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 14:12:25 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 14:12:25 INFO TextDataModel: Transform data to Convertor successfully!
+22/06/05 14:12:25 INFO TextDataConvertor: Dataset: [data/split/cv_3/test.txt]
+22/06/05 14:12:25 INFO TextDataConvertor: DataSet: data/split/cv_3/test.txt is finished
+22/06/05 14:12:25 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 14:12:25 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 14:12:25 INFO TextDataModel: Split data to train Set and test Set successfully!
+22/06/05 14:12:25 INFO TextDataModel: Data cardinality of training is 73581
+22/06/05 14:12:25 INFO TextDataModel: Data cardinality of testing is 36790
+22/06/05 14:12:25 INFO TextDataModel: Feature appender loaded successfully!
+22/06/05 14:12:25 INFO RecommenderJob: ExpCMD: START - Executing recommender job on 3.
+22/06/05 14:12:28 INFO SLIMRecommender: Job Setup completed.
+22/06/05 14:12:29 INFO SLIMRecommender: SLIMRecommender iter 1: loss = 477380.111059007, delta_loss = -477380.111059007
+22/06/05 14:12:30 INFO SLIMRecommender: SLIMRecommender iter 2: loss = 28268.782000742838, delta_loss = 449111.32905826415
+22/06/05 14:12:31 INFO SLIMRecommender: SLIMRecommender iter 3: loss = 29021.114812096956, delta_loss = -752.3328113541174
+22/06/05 14:12:31 INFO SLIMRecommender: Job Train completed.
+22/06/05 14:12:31 INFO RecommenderJob: ExpCMD: COMPLETE
+22/06/05 14:12:31 INFO RecommenderJob: EvalCMD: START
+22/06/05 14:12:31 INFO SLIMRecommender: begin recommend
+22/06/05 14:12:32 INFO SLIMRecommender: end recommend
+22/06/05 14:12:32 INFO RecommenderJob: Evaluator info:NormalizedDCGEvaluator is 0.013474199275857055
+22/06/05 14:12:32 INFO SLIMRecommender: begin recommend
+22/06/05 14:12:33 INFO SLIMRecommender: end recommend
+22/06/05 14:12:33 INFO RecommenderJob: Result path is exp00004/result/out-3.txt
+22/06/05 14:12:33 INFO RecommenderJob: EvalCMD: COMPLETE.

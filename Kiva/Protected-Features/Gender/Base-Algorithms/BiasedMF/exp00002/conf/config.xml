@@ -13,6 +13,11 @@
 		<item-feature-file>loan_feature_df_hc_10core.csv</item-feature-file>
 		<protected-feature name="fea:GENDER_F" type="item">GENDER_F</protected-feature>
 	</features>
+
+	<optimize>
+		<iterations>100</iterations> 
+		<metric>ndcg_metric.py</metric>
+	</optimize> 
 	
 	
 	<splitter>
@@ -20,29 +25,30 @@
 		<save>true</save>
 	</splitter>
 	
-	<optimize>
-		<iterations>5</iterations> 
-		<metric>psp</metric>
-	</optimize> 
-	
 	
     <alg>
 		<class>biasedmf</class>
-		<learn-rate>0.01</learn-rate>
-		<learn-rate-max>0.01</learn-rate-max>
-		<learn-rate-decay>1.0</learn-rate-decay>
+		<learn-rate>0.0002</learn-rate>
+
+	<learn-rate-max var="true">0.10400506350933747</learn-rate-max><learn-rate-decay>1.0</learn-rate-decay>
 		<bold-driver>false</bold-driver>
-		<iterator-max>10</iterator-max>
-		<user-reg var="true">0.18791831772545525</user-reg><item-reg var="true">0.6637912211602464</item-reg><bias-reg>0.01</bias-reg>
-		<num-factors>50</num-factors>
-	<early-stop>true</early-stop>
-	</alg>
+		<iterator-max>50</iterator-max>
+		<user-reg var="true">0.35393801796539914</user-reg><item-reg var="true">0.37506641116639194</item-reg><bias-reg>0.01</bias-reg>
+		<num-factors var="true" type="discrete">5</num-factors><early-stop>true</early-stop>
+	<similarity type="item">pcc</similarity> --&gt;
+		</alg>
 	
 	<metric>
 		<ranking>true</ranking>
 		<list-size>50</list-size>
-		<class>ndcg,precision,psp</class>
-		<protected-feature type="item">GENDER_F</protected-feature>
+		<class>ndcg</class>
+	</metric>
+
+	<metric>
+		<script src="system" lang="python3">
+			<script-name>ndcg_metric.py</script-name>
+			<param name="list_size">50</param>
+		</script>
 	</metric>
 	
 	

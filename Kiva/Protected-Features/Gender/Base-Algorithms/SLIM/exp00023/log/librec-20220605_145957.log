@@ -1,0 +1,91 @@
+22/06/05 14:59:57 INFO TextDataConvertor: Dataset: [data/rating_5000_cls_hc_10core_iterative.csv]
+22/06/05 14:59:57 INFO TextDataConvertor: DataSet: ...ng_5000_cls_hc_10core_iterative.csv is finished
+22/06/05 14:59:57 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 14:59:57 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 14:59:57 INFO TextDataModel: Transform data to Convertor successfully!
+22/06/05 14:59:58 INFO TextDataModel: Split data to train Set and test Set successfully!
+22/06/05 14:59:58 INFO TextDataModel: Feature appender loaded successfully!
+22/06/05 14:59:58 INFO TextDataConvertor: Dataset: [data/split/cv_1/train.txt]
+22/06/05 14:59:58 INFO TextDataConvertor: DataSet: data/split/cv_1/train.txt is finished
+22/06/05 14:59:58 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 14:59:58 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 14:59:58 INFO TextDataModel: Transform data to Convertor successfully!
+22/06/05 14:59:58 INFO TextDataConvertor: Dataset: [data/split/cv_1/test.txt]
+22/06/05 14:59:58 INFO TextDataConvertor: DataSet: data/split/cv_1/test.txt is finished
+22/06/05 14:59:58 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 14:59:58 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 14:59:58 INFO TextDataModel: Split data to train Set and test Set successfully!
+22/06/05 14:59:58 INFO TextDataModel: Data cardinality of training is 73580
+22/06/05 14:59:58 INFO TextDataModel: Data cardinality of testing is 36791
+22/06/05 14:59:58 INFO TextDataModel: Feature appender loaded successfully!
+22/06/05 14:59:58 INFO RecommenderJob: ExpCMD: START - Executing recommender job on 1.
+22/06/05 15:00:01 INFO SLIMRecommender: Job Setup completed.
+22/06/05 15:00:02 INFO SLIMRecommender: SLIMRecommender iter 1: loss = 506826.65952421183, delta_loss = -506826.65952421183
+22/06/05 15:00:04 INFO SLIMRecommender: SLIMRecommender iter 2: loss = 28198.07286812445, delta_loss = 478628.58665608737
+22/06/05 15:00:05 INFO SLIMRecommender: SLIMRecommender iter 3: loss = 28298.074888917097, delta_loss = -100.00202079264636
+22/06/05 15:00:05 INFO SLIMRecommender: Job Train completed.
+22/06/05 15:00:05 INFO RecommenderJob: ExpCMD: COMPLETE
+22/06/05 15:00:05 INFO RecommenderJob: EvalCMD: START
+22/06/05 15:00:05 INFO SLIMRecommender: begin recommend
+22/06/05 15:00:06 INFO SLIMRecommender: end recommend
+22/06/05 15:00:06 INFO RecommenderJob: Evaluator info:NormalizedDCGEvaluator is 0.012227373102197901
+22/06/05 15:00:06 INFO SLIMRecommender: begin recommend
+22/06/05 15:00:07 INFO SLIMRecommender: end recommend
+22/06/05 15:00:07 INFO RecommenderJob: Result path is exp00023/result/out-1.txt
+22/06/05 15:00:07 INFO RecommenderJob: EvalCMD: COMPLETE.
+22/06/05 15:00:07 INFO TextDataConvertor: Dataset: [data/split/cv_2/train.txt]
+22/06/05 15:00:07 INFO TextDataConvertor: DataSet: data/split/cv_2/train.txt is finished
+22/06/05 15:00:07 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 15:00:07 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 15:00:07 INFO TextDataModel: Transform data to Convertor successfully!
+22/06/05 15:00:07 INFO TextDataConvertor: Dataset: [data/split/cv_2/test.txt]
+22/06/05 15:00:07 INFO TextDataConvertor: DataSet: data/split/cv_2/test.txt is finished
+22/06/05 15:00:07 INFO TextDataConvertor: rating Scale: [3.0, 4.0, 5.0]
+22/06/05 15:00:07 INFO TextDataConvertor: user number: 4005,	 item number is: 2673
+22/06/05 15:00:07 INFO TextDataModel: Split data to train Set and test Set successfully!
+22/06/05 15:00:07 INFO TextDataModel: Data cardinality of training is 73581
+22/06/05 15:00:07 INFO TextDataModel: Data cardinality of testing is 36790
+22/06/05 15:00:07 INFO TextDataModel: Feature appender loaded successfully!
+22/06/05 15:00:07 INFO RecommenderJob: ExpCMD: START - Executing recommender job on 2.
+Exception in thread "main" java.lang.ClassCastException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at java.base/java.util.concurrent.ForkJoinTask.getThrowableException(ForkJoinTask.java:603)
+	at java.base/java.util.concurrent.ForkJoinTask.reportException(ForkJoinTask.java:678)
+	at java.base/java.util.concurrent.ForkJoinTask.invoke(ForkJoinTask.java:737)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateParallel(ForEachOps.java:159)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateParallel(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:233)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:661)
+	at net.librec.similarity.AbstractRecommenderSimilarity.buildSimilarityMatrix(AbstractRecommenderSimilarity.java:83)
+	at net.that_recsys_lab.auto.AutoRecommenderJob.generateSimilarityAutoOverload(AutoRecommenderJob.java:230)
+	at net.that_recsys_lab.auto.cmd.ExpCmd.executeRecommenderJob(ExpCmd.java:95)
+	at net.that_recsys_lab.auto.cmd.ExpCmd.execute(ExpCmd.java:54)
+	at net.that_recsys_lab.auto.cmd.SeqCmd.execute(SeqCmd.java:22)
+	at net.that_recsys_lab.auto.cmd.SeqCmd.execute(SeqCmd.java:22)
+	at net.that_recsys_lab.auto.AutoRecommenderJob.runJob(AutoRecommenderJob.java:198)
+	at net.that_recsys_lab.auto.SingleJobRunner.main(SingleJobRunner.java:27)
+Caused by: java.lang.ClassCastException: class java.util.HashMap$Node cannot be cast to class java.util.HashMap$TreeNode (java.util.HashMap$Node and java.util.HashMap$TreeNode are in module java.base of loader 'bootstrap')
+	at java.base/java.util.HashMap$TreeNode.moveRootToFront(HashMap.java:1900)
+	at java.base/java.util.HashMap$TreeNode.treeify(HashMap.java:2016)
+	at java.base/java.util.HashMap.treeifyBin(HashMap.java:768)
+	at java.base/java.util.HashMap.putVal(HashMap.java:640)
+	at java.base/java.util.HashMap.put(HashMap.java:608)
+	at com.google.common.collect.StandardTable.getOrCreate(StandardTable.java:132)
+	at com.google.common.collect.StandardTable.put(StandardTable.java:141)
+	at com.google.common.collect.HashBasedTable.put(HashBasedTable.java:55)
+	at net.librec.math.structure.SymmMatrix.set(SymmMatrix.java:103)
+	at net.librec.similarity.AbstractRecommenderSimilarity.lambda$buildSimilarityMatrix$0(AbstractRecommenderSimilarity.java:95)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.ForEachOps$ForEachTask.compute(ForEachOps.java:290)
+	at java.base/java.util.concurrent.CountedCompleter.exec(CountedCompleter.java:746)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)

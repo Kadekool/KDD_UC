@@ -1,0 +1,1 @@
+ERROR:root: Script failure: ndcg_metric.py: Script at /home/kadekool/librec-main/env/lib/python3.8/site-packages/librec_auto-0.2.13-py3.8.egg/librec_auto/core/cmd/eval/ndcg_metric.py failed with errors

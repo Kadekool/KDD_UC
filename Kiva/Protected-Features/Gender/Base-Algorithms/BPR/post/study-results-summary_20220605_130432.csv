@@ -1,0 +1,2 @@
+Experiment,user-reg,item-reg,num-factors,NormalizedDCGEvaluator,ndcg_metric.py
+exp00000,0.001,0.001,5.0,0.08224716548142268,0.08259434815144986
